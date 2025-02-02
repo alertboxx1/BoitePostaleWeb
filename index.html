@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestion des clients</title>
+</head>
+<body>
+  <h1>Connexion</h1>
+  
+  <form id="loginForm">
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" required>
+    <button type="submit">Se connecter</button>
+  </form>
+
+  <div id="content" style="display: none;">
+    <h2>Bienvenue sur la gestion des clients</h2>
+    <p>Ici, tu peux ajouter ou retirer des clients.</p>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').onsubmit = function(e) {
+      e.preventDefault();
+      var password = document.getElementById('password').value;
+      
+      if (password === "1234") {
+        document.getElementById('content').style.display = 'block';
+      } else {
+        alert('Mot de passe incorrect');
+      }
+    };
+  </script>
+</body>
+</html>
